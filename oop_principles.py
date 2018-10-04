@@ -13,4 +13,10 @@ class User:
 
     def login(self,email,password):
         self.email=email
-        self.password=password        
+        self.password=password
+
+class Question(User):
+    """Question class"""    
+
+    def __init__(self,question):
+        self.question = question         
