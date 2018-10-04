@@ -10,3 +10,7 @@ class User:
         self.email = email
         self.password = password
         return "Registration was successful"
+
+    def login(self,email,password):
+        self.email=email
+        self.password=password        
