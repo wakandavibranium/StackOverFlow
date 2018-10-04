@@ -18,5 +18,8 @@ class User:
 class Question(User):
     """Question class"""    
 
-    def __init__(self,question):
-        self.question = question         
+    def save(self,question_id,question):
+        self.question_id = question_id
+        self.question = question
+        self.question_dictionary = dict(id=self.question_id, title=self.question)
+        return self.question_dictionary
