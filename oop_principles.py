@@ -32,3 +32,7 @@ class Answer(Question):
     def __init__(self,answer_id,answer):       
         self.answer_id = answer_id
         self.answer = answer
+
+    def save(self,answer):
+        self.answer_dictionary = dict(a_id=self.answer_id, answer=self.answer)
+        return self.answer_dictionary        
