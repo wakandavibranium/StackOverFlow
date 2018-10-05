@@ -18,17 +18,17 @@ class User:
 class Question(User):
     """Question class"""
 
-<<<<<<< HEAD
-    def save(self,question_id,question):
-        self.question_id = question_id
-        self.question = question
-        self.question_dictionary = dict(id=self.question_id, title=self.question)
-=======
     def __init__(self,question_id,question):
         self.question_id = question_id
         self.question = question            
 
     def save(self,question):
         self.question_dictionary = dict(q_id=self.question_id, question=self.question)
->>>>>>> 5c569a9bca8d36fedff2b57e77a5a06d4465eee5
         return self.question_dictionary
+
+class Answer(Question):
+    """Answer class"""
+
+    def __init__(self,answer_id,answer):       
+        self.answer_id = answer_id
+        self.answer = answer
