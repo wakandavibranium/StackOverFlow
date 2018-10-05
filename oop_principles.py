@@ -13,4 +13,15 @@ class User:
 
     def login(self,email,password):
         self.email=email
-        self.password=password        
+        self.password=password
+
+class Question(User):
+    """Question class"""
+
+    def __init__(self,question_id,question):
+        self.question_id = question_id
+        self.question = question            
+
+    def save(self,question):
+        self.question_dictionary = dict(q_id=self.question_id, question=self.question)
+        return self.question_dictionary
